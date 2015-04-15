@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PyTemp", "PyTemp\PyTemp.pyproj", "{7BFB46D1-2F41-4F0E-BCDA-D50C8300A226}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PyPublisher", "PyPublisher\PyPublisher.pyproj", "{56254163-5F47-4CAC-AAD2-D4DC500C19F8}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PySubscriber", "PySubscriber\PySubscriber.pyproj", "{7CE2565A-C738-4C5C-80D6-683BF419C283}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsSubscriber", "NodejsSubscriber\NodejsSubscriber.njsproj", "{F8B96920-B4DA-4D1A-B0A1-613B17C5A200}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PyAMQPPublisher", "PyAMQPPublisher\PyAMQPPublisher.pyproj", "{CB84B505-86CD-4CF0-B077-3DA0C0FBABD5}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsAMQPSubscriber", "NodejsAMQPSubscriber\NodejsAMQPSubscriber.njsproj", "{3BFEC31A-C564-488C-BC89-33FA283D7F9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BFB46D1-2F41-4F0E-BCDA-D50C8300A226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFB46D1-2F41-4F0E-BCDA-D50C8300A226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56254163-5F47-4CAC-AAD2-D4DC500C19F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56254163-5F47-4CAC-AAD2-D4DC500C19F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE2565A-C738-4C5C-80D6-683BF419C283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE2565A-C738-4C5C-80D6-683BF419C283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B96920-B4DA-4D1A-B0A1-613B17C5A200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B96920-B4DA-4D1A-B0A1-613B17C5A200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B96920-B4DA-4D1A-B0A1-613B17C5A200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B96920-B4DA-4D1A-B0A1-613B17C5A200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB84B505-86CD-4CF0-B077-3DA0C0FBABD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB84B505-86CD-4CF0-B077-3DA0C0FBABD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BFEC31A-C564-488C-BC89-33FA283D7F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BFEC31A-C564-488C-BC89-33FA283D7F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BFEC31A-C564-488C-BC89-33FA283D7F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BFEC31A-C564-488C-BC89-33FA283D7F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
