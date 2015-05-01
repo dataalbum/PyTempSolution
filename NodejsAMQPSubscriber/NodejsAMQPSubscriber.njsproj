@@ -30,6 +30,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\Backup Files\apamqplibjs_example.js">
+      <Link>apamqplibjs_example.js</Link>
+    </Compile>
     <Compile Include="app.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />

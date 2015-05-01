@@ -67,9 +67,11 @@ def main():
     params.socket_timeout = 5
     connection = pika.BlockingConnection(params) # Connect to CloudAMQP
     channel = connection.channel() # start a channel
-    channel.queue_declare(queue='temperature') # Declare a queue
+    #channel.queue_declare(queue='temperature') # Declare a queue
+    channel.exchange_declare(exchange='temperature',
+                             type='fanout') # Declare a topic
     # send a message
-    channel.basic_publish(exchange='', routing_key='temperature', body=message)
+    channel.basic_publish(exchange='temperature', routing_key='', body=message)
     print (" [x] Sent: " + message)
 
     connection.close()

@@ -9,9 +9,8 @@ import random
 
 # global variables
 speriod=(15*60)-1
-dbname=r'c:\sqlite\templog.db'
-
-
+# dbname=r'c:\sqlite\templog.db'
+dname='templog.db'
 
 # store the temperature in the database
 def log_temperature(temp):
@@ -40,23 +39,14 @@ def display_data():
 
 
 
-# get temerature
-# returns None on error, or the temperature as a float
+# get temperature
 def get_temp():
 
-    # get the status from the end of line 1 
-    status = "YES"
-
-    # is the status is ok, get the temperature from line 2
-    if status=="YES":
-        print (status)
-        tempvalue=random.uniform(-40, 40)
-        print (tempvalue)
-        return tempvalue
-    else:
-        print ("There was an error.")
-        return None
-
+    # get temperature from usb-thermometer pcsensor executable
+    output = subprocess.Popen(["/usr/local/bin/pcsensor"], stdout=subprocess.PIPE).communicate()[0]
+    output2 = output.split()[4]
+    temp = output2[:2]
+    return temp
 
 # main function
 # This is where the program starts 
