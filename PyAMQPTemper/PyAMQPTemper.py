@@ -10,16 +10,17 @@ import time
 import datetime
 
 # global variables
-speriod=10
+speriod = 10
 
 # get temperature
 def get_temp():
 
     # get temperature from usb-thermometer pcsensor executable
-    #output = subprocess.Popen(["/usr/local/bin/pcsensor"], stdout=subprocess.PIPE).communicate()[0]
-    #output2 = output.split()[4]
-    #temp = output2[:2]
-    temperature = random.uniform(-40, 40)
+    output = subprocess.Popen(["/usr/local/bin/pcsensor"], stdout=subprocess.PIPE).communicate()[0]
+    output2 = output.split()[4]
+    temperature = output2[:2]
+    print (temperature)
+    #temperature = random.uniform(-40, 40)
 
     # build json string
     # {
@@ -30,11 +31,11 @@ def get_temp():
     #     "measurename"   :   "string",
     #     "unitofmeasure" :   "string",
     #     "value"         :   double/float/integer
-    # }
+ 
     objects_list = []
     d = collections.OrderedDict()
     d['displayname'] = "TEMPer1F_V1.3"
-    d['location'] = "Home"
+    d['location'] = "Inside"
     d['measurename'] = "Temperature"
     d['unitofmeasure'] = "C"
     d['value'] = temperature
@@ -42,8 +43,7 @@ def get_temp():
     objects_list.append(d)
     
     json_string = json.dumps(objects_list)
-    #print (" json_string: " + json_string)
-
+    
     return json_string
 
 def send_temp(message):
