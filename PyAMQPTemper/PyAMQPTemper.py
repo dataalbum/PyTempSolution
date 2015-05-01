@@ -18,7 +18,7 @@ def get_temp():
     # get temperature from usb-thermometer pcsensor executable
     output = subprocess.Popen(["/usr/local/bin/pcsensor"], stdout=subprocess.PIPE).communicate()[0]
     output2 = output.split()[4]
-    temperature = output2[:2]
+    temperature = output2[:5]
     print (temperature)
     #temperature = random.uniform(-40, 40)
 
