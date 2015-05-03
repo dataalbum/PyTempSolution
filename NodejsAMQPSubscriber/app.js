@@ -14,7 +14,7 @@ amqpconn.on('ready', function () {
             console.log(' [*] Waiting for messages. To exit press CTRL+C')
             
             queue.subscribe(function (msg) {
-                console.log(" [x] %s", msg.data.toString('utf-8'));
+                console.log(" [x] Recieved: ", msg.data.toString('utf-8'));
                 
                 console.log(" Type: ", typeof msg.data);
                 var tempData = JSON.parse(msg.data.toString('utf-8'));

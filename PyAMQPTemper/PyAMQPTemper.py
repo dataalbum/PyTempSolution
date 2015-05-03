@@ -58,7 +58,12 @@ def send_temp(message):
     channel.exchange_declare(exchange='temperature',
                              type='fanout') # Declare a topic
     # send a message
-    channel.basic_publish(exchange='temperature', routing_key='', body=message)
+    channel.basic_publish(exchange='temperature', 
+                          routing_key='', 
+                          body=message,
+                          properties=pika.BasicProperties(
+                              delivery_mode = 2, # make message persistent
+                              ))
     print (" [x] Sent: " + message)
 
     connection.close()
@@ -67,7 +72,7 @@ def send_temp(message):
 # This is where the program starts 
 def main():
     
-    #while True:
+    while True:
 
         # get temp
         temp=get_temp()
@@ -75,7 +80,7 @@ def main():
         #send temp
         send_temp(temp)
     
-        #time.sleep(speriod)
+        time.sleep(speriod)
 
 if __name__=="__main__":
     main()
