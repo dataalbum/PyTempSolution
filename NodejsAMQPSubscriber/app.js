@@ -4,13 +4,13 @@ var MongoClient = require('mongodb').MongoClient;
 var amqpconn = amqp.createConnection({ url: 'amqp://ontpcbos:7G7Ilh2wbERfJNHZMhfHTHJPaj4GDGu1@bunny.cloudamqp.com/ontpcbos' });
 
 amqpconn.on('ready', function () {
-    amqpconn.exchange('temperature', {
+    amqpconn.exchange('logs', {
         type: 'fanout',
         autoDelete: false
     }, function (exchange) {
         amqpconn.queue('tmp-' + Math.random(), { exclusive: true },
                          function (queue) {
-            queue.bind('temperature', '');
+            queue.bind('logs', '');
             console.log(' [*] Waiting for messages. To exit press CTRL+C')
             
             queue.subscribe(function (msg) {

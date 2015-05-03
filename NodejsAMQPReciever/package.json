@@ -8,6 +8,7 @@
     "email": ""
   },
   "dependencies": {
-    "amqplib": "^0.3.2"
+    "amqplib": "^0.3.2",
+    "mongodb": "^2.0.28"
   }
 }

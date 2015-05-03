@@ -55,15 +55,16 @@ def send_temp(message):
     channel = connection.channel() # start a channel
     
     #channel.queue_declare(queue='temperature') # Declare a queue
-    channel.exchange_declare(exchange='temperature',
-                             type='fanout') # Declare a topic
+    channel.exchange_declare(exchange='logs',
+                             type='fanout',
+                             durable=True) # Declare a topic
     # send a message
-    channel.basic_publish(exchange='temperature', 
+    channel.basic_publish(exchange='logs', 
                           routing_key='', 
                           body=message,
                           properties=pika.BasicProperties(
-                              delivery_mode = 2, # make message persistent
-                              ))
+                         delivery_mode = 2, # make message persistent
+                         ))
     print (" [x] Sent: " + message)
 
     connection.close()
@@ -72,7 +73,7 @@ def send_temp(message):
 # This is where the program starts 
 def main():
     
-    while True:
+    #while True:
 
         # get temp
         temp=get_temp()
@@ -80,7 +81,7 @@ def main():
         #send temp
         send_temp(temp)
     
-        time.sleep(speriod)
+        #time.sleep(speriod)
 
 if __name__=="__main__":
     main()
