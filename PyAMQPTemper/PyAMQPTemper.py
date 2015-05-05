@@ -11,6 +11,7 @@ import datetime
 
 # global variables
 speriod = 10
+measure_name = "Temperature"
 
 # get temperature
 def get_temp():
@@ -36,7 +37,7 @@ def get_temp():
     d = collections.OrderedDict()
     d['displayname'] = "TEMPer1F_V1.3"
     d['location'] = "Inside"
-    d['measurename'] = "Temperature"
+    d['measurename'] = measure_name
     d['unitofmeasure'] = "C"
     d['value'] = temperature
     d['timestamp'] = str(datetime.datetime.now())
@@ -56,11 +57,11 @@ def send_temp(message):
     
     #channel.queue_declare(queue='temperature') # Declare a queue
     channel.exchange_declare(exchange='logs',
-                             type='fanout',
+                             type='topic',
                              durable=True) # Declare a topic
     # send a message
     channel.basic_publish(exchange='logs', 
-                          routing_key='', 
+                          routing_key=measure_name, 
                           body=message,
                           properties=pika.BasicProperties(
                          delivery_mode = 2, # make message persistent
