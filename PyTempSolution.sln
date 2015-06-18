@@ -19,6 +19,12 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PyAMQPTemper", "PyAMQPTempe
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsAMQPReciever", "NodejsAMQPReciever\NodejsAMQPReciever.njsproj", "{8CAEF764-C776-48F3-A50B-5FAFC0D37E25}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsLogAPI", "NodejsLogAPI\NodejsLogAPI.njsproj", "{F50A3EDF-CD2F-427A-BCDA-45429E9B1CD8}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PyTemperMonitor", "PyTemperMonitor\PyTemperMonitor.pyproj", "{5FC0C425-542C-471C-AE08-F08C3EDF7C9E}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "LogRESTAPI", "LogRESTAPI\LogRESTAPI.njsproj", "{86E4C1C5-92C1-4521-B9CA-261B26B1F373}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +53,16 @@ Global
 		{8CAEF764-C776-48F3-A50B-5FAFC0D37E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CAEF764-C776-48F3-A50B-5FAFC0D37E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CAEF764-C776-48F3-A50B-5FAFC0D37E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50A3EDF-CD2F-427A-BCDA-45429E9B1CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50A3EDF-CD2F-427A-BCDA-45429E9B1CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50A3EDF-CD2F-427A-BCDA-45429E9B1CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50A3EDF-CD2F-427A-BCDA-45429E9B1CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FC0C425-542C-471C-AE08-F08C3EDF7C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC0C425-542C-471C-AE08-F08C3EDF7C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E4C1C5-92C1-4521-B9CA-261B26B1F373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E4C1C5-92C1-4521-B9CA-261B26B1F373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E4C1C5-92C1-4521-B9CA-261B26B1F373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E4C1C5-92C1-4521-B9CA-261B26B1F373}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

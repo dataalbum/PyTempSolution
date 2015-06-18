@@ -1,0 +1,14 @@
+{
+  "name": "LogRESTAPI",
+  "version": "0.0.0",
+  "description": "LogRESTAPI",
+  "main": "server.js",
+  "author": {
+    "name": "Riina",
+    "email": ""
+  },
+  "dependencies": {
+    "mongoose": "^3.8.30",
+    "restify": "^3.0.3"
+  }
+}
